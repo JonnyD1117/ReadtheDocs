@@ -1,13 +1,12 @@
-from SPMe_w_Sensitivity_Params import SingleParticleModelElectrolyte_w_Sensitivity
 import gym
 from gym import error, spaces, utils, logger
 from gym.utils import seeding
 import numpy as np
 
-from torch.utils.tensorboard import SummaryWriter
 
 
-class SPMenv(gym.Env):
+
+class SPMenv():
     """ This is a doc string for the Class"""
 
     # metadata = {'render.modes': ['human']}
@@ -24,10 +23,9 @@ class SPMenv(gym.Env):
 
         self.log_state = log_data
 
-        if self.log_state is True:
-            # self.writer = SummaryWriter('Logs/DDPG/Trial6')
-            # self.writer = SummaryWriter('Temp_Logs/Noise_Test_point5_SOC/DDPG_Noise2_Len_25k_mu_Neg30_std_point75')
-            self.writer = SummaryWriter('C:/Users/Indy-Windows/Documents/Battery_Active_Learning/Model_Training_State_Iterative/Temp_Logs/TimeTerm_point5_SOC/DDPG_Noise1_Len_25k_mu_0_std_point75')
+        # if self.log_state is True:
+        #     # self.writer = SummaryWriter('Logs/DDPG/Trial6')
+        #     # self.writer = SummaryWriter('Temp_Logs/Noise_Test_point5_SOC/DDPG_Noise2_Len_25k_mu_Neg30_std_point75')
 
         self.soc_list = []
 
@@ -38,7 +36,6 @@ class SPMenv(gym.Env):
         self.max_sen = 0
         self.time_step = time_step
         self.step_counter = 0
-        self.SPMe = SingleParticleModelElectrolyte_w_Sensitivity(timestep=self.time_step, init_soc=SOC)
 
         state_limits = np.array([np.inf, np.inf], dtype=np.float32)
         max_C_val = np.array([25.67*5], dtype=np.float32)
