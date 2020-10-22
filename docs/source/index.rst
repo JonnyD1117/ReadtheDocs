@@ -6,9 +6,15 @@
 Welcome to ReadDocs_Test's documentation!
 =========================================
 
+.. automodule:: new_moduule
+
+   .. autoclass:: SPMenv
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+
 
 
 
