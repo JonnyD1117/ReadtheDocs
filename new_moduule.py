@@ -34,3 +34,28 @@ class SPMenv():
 
         return 0
 
+    def Cool_func1(self, p1, p2):
+        """
+        This is a pretty cool function HUH
+        :param p1:
+        :param p2:
+        :return:
+        """
+
+
+
+    def Cool_func2(self, p3, p4):
+        """
+               This is a pretty cool function HUH
+               :param p3:
+               :param p4:
+               :return:
+               """
+
+    def Something_Different(self, p5, p6):
+        """
+        This is a pretty cool function HUH
+        :param p5:
+        :param p6:
+        :return:
+        """
