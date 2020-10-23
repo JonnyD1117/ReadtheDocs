@@ -10,7 +10,6 @@ class SPMenv():
         :param SOC:
         """
 
-
     def step(self, action):
         """
         Doc string for STEP
@@ -20,7 +19,7 @@ class SPMenv():
 
         state = 0
         reward = 0
-        done =0
+        done = 0
 
 
         return state, reward, done, {}

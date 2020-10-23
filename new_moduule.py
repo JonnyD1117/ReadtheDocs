@@ -59,3 +59,7 @@ class SPMenv():
         :param p6:
         :return:
         """
+
+    def This_is_a_test_func(self):
+        """ But nothing interesting happens here"""
+
